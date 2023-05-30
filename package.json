@@ -1,15 +1,21 @@
 {
   "name": "akari-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "akari grpc client for node.js",
   "type": "module",
-  "main": "dist/akari.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uboar/akari-client.git"
+  },
   "scripts": {
     "start": "ts-node index.ts",
-    "build": "tsc -d && cp -r ./src/akari_proto ./dist/akari_proto",
+    "prepare": "npm run build",
+    "build": "npm run clean && tsc -d && mkdir ./dist/akari_proto && cp ./src/akari_proto/*.js ./src/akari_proto/*.d.ts ./dist/akari_proto/",
     "clean": "rm -r dist"
   },
-  "author": "",
+  "author": "uboaruboar",
   "license": "Apache-2.0",
   "dependencies": {
     "@grpc/grpc-js": "^1.8.14",
@@ -17,7 +23,6 @@
     "google-protobuf": "^3.21.2",
     "grpc_tools_node_protoc_ts": "^5.3.3",
     "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.4"
   },
   "devDependencies": {

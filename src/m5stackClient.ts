@@ -9,12 +9,49 @@ import {
 } from "./akari_proto/m5stack_pb";
 import { Empty } from "google-protobuf/google/protobuf/empty_pb";
 
-import type {
-  SetM5DisplayTextRequest,
-  SetM5DisplayImageRequest,
-  SetM5AllOutRequest,
-  GetM5StatusResponse,
-} from "./m5stackClient.d";
+
+
+export type SetM5DisplayTextRequest = {
+  text: string;
+  posX?: number;
+  posY?: number;
+  size?: number;
+  textColor?: Color;
+  backColor?: Color;
+  refresh?: boolean;
+};
+
+export type SetM5DisplayImageRequest = {
+  filePath: string;
+  posX?: number;
+  posY?: number;
+  scale?: number;
+};
+
+export type SetM5AllOutRequest = {
+  dout0?: boolean;
+  dout1?: boolean;
+  pwmout0?: number;
+};
+
+export type GetM5StatusResponse<T = number, B = number> = {
+  din0: boolean;
+  din1: boolean;
+  ain0: number;
+  dout0: boolean;
+  dout1: boolean;
+  pwmout0: boolean;
+  general0: T;
+  general1: B;
+  button_a: boolean;
+  button_b: boolean;
+  button_c: boolean;
+  temperature: number;
+  pressure: number;
+  brightness: number;
+  is_response: boolean;
+  time: number;
+};
 
 const GPIO_PinId = {
   dout0: 0,

@@ -1,8 +1,16 @@
-# akari_node
+# akari-client
 
-[akari_client](https://akarigroup.github.io/docs/source/sdk_reference/akari_client.html)のNode.js移植
+[akari_client](https://akarigroup.github.io/docs/source/sdk_reference/akari_client.html)の Node.js 移植
 
-## protoc生成
+## 使い方
+
+### インストール
+
+```bash
+npm i akari-client
+```
+
+## protoc の生成
 
 ```bash
 grpc_tools_node_protoc \
