@@ -1,0 +1,3 @@
+node_modules
+akari_proto/*.proto
+dist
