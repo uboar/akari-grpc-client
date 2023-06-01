@@ -1,13 +1,13 @@
 {
-  "name": "akari-client",
-  "version": "0.1.3",
+  "name": "akari-grpc-client",
+  "version": "0.1.0",
   "description": "akari grpc client for node.js",
   "type": "commonjs",
-  "main": "dist/akari.js",
-  "types": "dist/akari.d.ts",
+  "main": "dist/akariGrpcClient.js",
+  "types": "dist/akariGrpcClient.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uboar/akari-client.git"
+    "url": "git+https://github.com/uboar/akari-grpc-client.git"
   },
   "scripts": {
     "prepare": "npm run build",
