@@ -1,16 +1,15 @@
 {
   "name": "akari-client",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "akari grpc client for node.js",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "type": "commonjs",
+  "main": "dist/akari.js",
+  "types": "dist/akari.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uboar/akari-client.git"
   },
   "scripts": {
-    "start": "ts-node index.ts",
     "prepare": "npm run build",
     "build": "npm run clean && tsc -d && mkdir ./dist/akari_proto && cp ./src/akari_proto/*.js ./src/akari_proto/*.d.ts ./dist/akari_proto/",
     "clean": "rm -r dist"

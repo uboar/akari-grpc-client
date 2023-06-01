@@ -4,7 +4,7 @@ import * as AkariJointClient from "./akari_proto/joints_controller_grpc_pb";
 import * as AkariM5StackClient from "./akari_proto/m5stack_grpc_pb";
 import { ChannelCredentials } from "@grpc/grpc-js";
 
-export default class Akari {
+export class Akari {
   private readonly DEFAULT_HOST_URL = "localhost:51001";
   private jointClient: AkariJointClient.JointsControllerServiceClient;
   private m5Client: AkariM5StackClient.M5StackServiceClient;
