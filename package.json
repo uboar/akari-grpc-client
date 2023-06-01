@@ -1,6 +1,6 @@
 {
   "name": "akari-grpc-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "akari grpc client for node.js",
   "type": "commonjs",
   "main": "dist/akariGrpcClient.js",
